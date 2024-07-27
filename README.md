@@ -50,7 +50,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 - Add pssible subtopics
 - Restructure html file with css (web-dev)
 
-License
+## License
 This project is licensed under the GNU License. See the LICENSE file for details.
 
 
