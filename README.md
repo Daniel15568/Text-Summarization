@@ -17,7 +17,7 @@ Using Anaconda:
     conda activate myenv`
 
 #### Install Dependencies
-    pip install -r requirements.txt
+    pip install -r requirements.txt.txt
 #### Run the Application
     flask run
 Open your browser and navigate to http://127.0.0.1:5000.
