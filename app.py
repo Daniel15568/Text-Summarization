@@ -37,6 +37,22 @@ def summarize(text):
     return summarized_text[0]['summary_text']
 
 
+def process_pdf(file):
+    text, subheaders = pdf_to_text(file.name)
+    parts = preprocess_text(text, 500)
+    summaries = [summarize(part) for part in parts]
+    full_summary = " ".join(summaries)
+    return full_summary, "\n".join(subheaders)
+
+interface = gr.Interface(
+    fn=process_pdf,
+    inputs=gr.File(label='Upload PDF'),
+    outputs=[gr.Textbox(label='Summary'), gr.Textbox(label='Subheaders')],
+    title= "PDF Summarizer",
+    description="Upload a PDF to get a summarized text")
+
+
+interface.launch()
 # @app.route('/')
 # def index():
 #     return render_template('index.html')
