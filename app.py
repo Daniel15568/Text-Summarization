@@ -52,7 +52,7 @@ interface = gr.Interface(
     description="Upload a PDF to get a summarized text")
 
 
-interface.launch()
+interface.launch(share=True)
 # @app.route('/')
 # def index():
 #     return render_template('index.html')
